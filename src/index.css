@@ -1,12 +1,92 @@
 @import "tailwindcss";
 
+:root {
+  --bg: #f8fafc;
+  --text: #0f172a;
+  --muted: #475569;
+  --nav-bg: rgba(255,255,255,0.9);
+  --nav-border: rgba(15,23,42,0.06);
+}
+
+.dark {
+  --bg: #0b1220;
+  --text: #e6eef8;
+  --muted: #94a3b8;
+  --nav-bg: rgba(2,6,23,0.6);
+  --nav-border: rgba(255,255,255,0.06);
+}
+
+:root {
+  --input-bg: rgba(255,255,255,0.06);
+  --input-text: var(--text);
+  --input-border: rgba(255,255,255,0.06);
+}
+
+.dark {
+  --input-bg: rgba(255,255,255,0.03);
+  --input-text: var(--text);
+  --input-border: rgba(255,255,255,0.06);
+}
+
 html,
 body {
   margin: 0;
   padding: 0;
   font-family: "Space Grotesk", sans-serif;
-  background: #0a0a0a;
-  color: #f3f4f6;
+  background: var(--bg);
+  color: var(--text);
+}
+
+/* Navbar link helpers */
+.nav-link {
+  color: var(--muted);
+  transition: color 0.15s ease;
+}
+.nav-link:hover {
+  color: var(--text);
+}
+
+/* Theme-aware text utilities */
+.text-theme {
+  color: var(--text) !important;
+}
+.muted-theme {
+  color: var(--muted) !important;
+}
+
+/* Input helper that adapts to theme */
+.input-theme {
+  background: var(--input-bg) !important;
+  color: var(--input-text) !important;
+  border-color: var(--input-border) !important;
+}
+
+/* Light-mode only card/glass fixes so boxes are visible without changing dark mode */
+html:not(.dark) .card,
+html:not(.dark) .border-white\/10 {
+  background: rgba(255,255,255,0.85) !important;
+  border-color: rgba(15,23,42,0.06) !important;
+  color: var(--text) !important;
+  backdrop-filter: blur(6px);
+}
+
+html:not(.dark) .glass {
+  background: linear-gradient(180deg, rgba(255,255,255,0.85), rgba(255,255,255,0.8)) !important;
+  border-color: rgba(15,23,42,0.06) !important;
+  color: var(--text) !important;
+  backdrop-filter: blur(8px);
+}
+
+/* Make inputs visible in light mode */
+html:not(.dark) .input-theme {
+  background: #ffffff !important;
+  border-color: rgba(15,23,42,0.08) !important;
+  color: var(--text) !important;
+  box-shadow: 0 1px 0 rgba(15,23,42,0.03) inset;
+}
+
+html:not(.dark) .input-theme::placeholder {
+  color: rgba(15,23,42,0.5) !important;
 }
 
 @layer utilities {

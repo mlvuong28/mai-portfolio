@@ -23,7 +23,7 @@ export const About = () => {
           </h2>
 
           <div className="rounded-xl p-8 border-white/10 border hover:-translate-y-1 transition-all">
-            <p className="text-gray-300 mb-6">
+            <p className="mb-6" style={{ color: "var(--text)" }}>
               Passionate developer with expertise in building scalable web
               applications and creating innovative solutions.
             </p>
@@ -63,10 +63,10 @@ export const About = () => {
             </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
+          <div className="grid grid-cols-1 gap-6 mt-8">
             <div className="p-6 rounded-xl border-white/10 border hover:-translate-y-1 transition-all">
               <h3 className="text-xl font-bold mb-4"> 🏫 Education </h3>
-              <ul className="list-disc list-inside text-gray-300 space-y-2">
+              <ul className="list-disc list-inside text-theme space-y-2">
                 <li>
                   <strong> B.S. in Computer Science </strong> - UMass Amherst
                   (2025-2026)
@@ -82,25 +82,64 @@ export const About = () => {
             </div>
             <div className="p-6 rounded-xl border-white/10 border hover:-translate-y-1 transition-all">
               <h3 className="text-xl font-bold mb-4"> 💼 Work Experience </h3>
-              <div className="space-y-4 text-gray-300">
-                <div>
-                  <h4 className="font-semibold">
-                    {" "}
-                    .{" "}
-                  </h4>
-                  <p>
-                    .
-                  </p>
+              <div className="space-y-4 text-theme">
+                <div className="space-y-2">
+                  <div>
+                    <h4 className="font-semibold">Astrion Bank</h4>
+                    <p className="muted-theme">
+                      Software Engineer Intern (Security Platform Team) • May
+                      2025 – Aug 2025
+                    </p>
+                  </div>
+                  <ul className="list-disc list-inside space-y-1">
+                    <li>
+                      Implemented secure Java Spring Boot APIs for IAM Service,
+                      adding JWT-based authorization, input validation, and rate
+                      limiting to reduce unauthorized request attempts by 45%
+                    </li>
+                    <li>
+                      Built automated CI/CD pipeline for the Identity and Access
+                      Management (IAM) Service using GitHub Actions and Docker
+                      Compose, reducing deploy rollback risk by 50% with
+                      integrated security scan by Semgrep
+                    </li>
+                    <li>
+                      Integrated Prometheus and Grafana with AWS CloudWatch to
+                      monitor global transaction service performance and
+                      optimize AWS EC2 usage, improved alerting accuracy and
+                      helped reduce idle resource cost by $5,000 per month
+                    </li>
+                  </ul>
                 </div>
 
-                <div>
-                  <h4 className="font-semibold">
-                    {" "}
-                    .{" "}
-                  </h4>
-                  <p>
-                    .
-                  </p>
+                <div className="space-y-2">
+                  <div>
+                    <h4 className="font-semibold">CloudyScale.ai</h4>
+                    <p className="muted-theme">
+                      Software Engineer Intern (Web Development Team) • May 2024
+                      – Aug 2024
+                    </p>
+                  </div>
+                  <ul className="list-disc list-inside space-y-1">
+                    <li>
+                      Developed internal chatbot platform using React.js, Redux,
+                      and Bootstrap, enabling legal teams to retrieve document
+                      insights via natural language, increased legal research
+                      speed by 40% and used by 100+ employees
+                    </li>
+                    <li>
+                      Improved backend for chatbot history in Golang, MySQL, and
+                      Google Cloud Storage, implementing timestamped message
+                      logging and file retrieval API, increased chatbot usage by
+                      80% across legal teams
+                    </li>
+                    <li>
+                      Wrote 40+ unit and integration tests across backend and
+                      frontend using Pytest, pytest-mock, and Selenium,
+                      increasing test coverage to 85% and reducing manual QA
+                      time by 20% in weekly deployments
+                    </li>
+                  </ul>
                 </div>
               </div>
             </div>

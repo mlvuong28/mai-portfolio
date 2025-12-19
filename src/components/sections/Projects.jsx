@@ -15,7 +15,7 @@ export const Projects = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="p-6 rounded-xl border border-white/10 hover:-translate-y-1 hover:border-blue-500/30 hover:shadow-[0_2px_8px_rgba(59,130,246,0.2)] transition">
               <h3 className="text-xl font-bold mb-2"> The Simon Game</h3>
-              <p className="text-gray-400 mb-4">
+              <p className="text-theme mb-4">
               It challenges users to repeat an increasingly complex sequence of button presses, with visual and audio feedback.
               </p>
               <div className="flex flex-wrap gap-2 mb-4">
@@ -58,7 +58,7 @@ export const Projects = () => {
             "
             >
               <h3 className="text-xl font-bold mb-2">TinDog</h3>
-              <p className="text-gray-400 mb-4">
+              <p className="text-theme mb-4">
                 Responsive landing page for a fictional dog-dating app, 
                 inspired by the design of popular startup websites.
               </p>
@@ -106,7 +106,7 @@ export const Projects = () => {
             "
             >
               <h3 className="text-xl font-bold mb-2">E-Commerce Web App</h3>
-              <p className="text-gray-400 mb-4">
+              <p className="text-theme mb-4">
                 Full-stack e-commerce with modern UI, secure payment
                 integration, and customizable product inventory.
               </p>
@@ -130,13 +130,19 @@ export const Projects = () => {
               </div>
               <div className="flex justify-between items-center">
                 <a
-                  href="#"
+                  href="https://github.com/mlvuong28/Ecommerce-nextjs-fullstack-app"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-blue-400 hover:text-blue-300 transition-colors my-4"
                 >
                   View Project →
                 </a>
+                <button
+                  onClick={() => window.open("https://ecommerce-nextjs-fullstack-app-ten.vercel.app/", "_blank")}
+                  className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded transition-colors"
+                >
+                  Demo
+                 </button>
               </div>
             </div>
 
@@ -148,13 +154,13 @@ export const Projects = () => {
               transition-all
             "
             >
-              <h3 className="text-xl font-bold mb-2">Real-Time Chat App</h3>
-              <p className="text-gray-400 mb-4">
-                Scalable chat platform supporting real-time messaging, presence,
-                and group chat features.
+              <h3 className="text-xl font-bold mb-2">Crypto Pilot</h3>
+              <p className="text-theme mb-4">
+                Full-stack crypto trading simulator that lets users place market and limit
+                orders, track balances, and view order history in real time.
               </p>
               <div className="flex flex-wrap gap-2 mb-4">
-                {["Socket.IO", "Express", "React", "Redis"].map((tech, key) => (
+                {["Socket.IO", "React", "TypeScript", "Node.js", "Express", "MongoDB", "JWT"].map((tech, key) => (
                   <span
                     key={key}
                     className="
@@ -171,7 +177,7 @@ export const Projects = () => {
               </div>
               <div className="flex justify-between items-center ">
                 <a
-                  href="#"
+                  href="https://github.com/po-tech-community"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-blue-400 hover:text-blue-300 transition-colors my-4"
